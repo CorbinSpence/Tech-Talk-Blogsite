@@ -2,14 +2,22 @@ const path = require('path')
 const express = require('express')
 const handlebars = require('express-handlebars')
 const routes = require('./controllers')
-const helpers = require('./utils/helpers')
+//const helpers = require('./utils/helpers')
 const sequelize = require('./config/connection')
+
+const sess = {
+    secret: 'Super secret secret',
+    resave: false,
+    saveUninitialized: true,
+};
 
 const server = express()
 const PORT = process.env.PORT || 3001
 
 // create personalized handlebar engine with helper methods
-const hbObject = handlebars.create({helpers})
+const hbObject = handlebars.create({})
+
+server.use(session(sess))
 
 // setting engine to hb instance
 server.engine('handlebars', hbObject.engine)

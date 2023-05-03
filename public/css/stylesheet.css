@@ -1,0 +1,51 @@
+:root{
+    --secondary: lightgray;
+}
+.container{
+    border: 2px solid black;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.full-width{
+    width: 100%;
+}
+.center-text{
+    text-align: center;
+}
+.block-header{
+    background-color: black;
+    color: white;
+}
+label{
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    padding:10px;
+    background-color: var(--secondary);
+    display: inline;
+}
+nav ul li:hover{
+    background-color: white;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-align-center{
+    align-items: center;
+}
